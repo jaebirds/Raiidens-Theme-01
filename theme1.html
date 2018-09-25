@@ -1,0 +1,941 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+<!--
+ |
+ |  Theme #1 by raiidens (@ tumblr)
+ |  Published July 2015
+ |  Ver. 1.05
+ |
+ |  Edit as much as you like, but please do not
+ |  claim as your own work, and leave credit somewhere.
+ |
+ -->
+
+<meta name="if:Infinite scrolling" content="1">
+<meta name="if:Show pagination buttons" content="1">
+<meta name="if:Show captions" content="1">
+<meta name="if:Show tags on index page" content="0">
+<meta name="if:Mirror layout" content="0">
+<meta name="if:Mirror corner image" content="0">
+<meta name="if:Black and white images" content="0">
+<meta name="if:Color images on hover" content="0">
+
+<meta name="image:Sidebar picture" content="http://static.tumblr.com/o4povtk/nVznrd0c7/toupload.jpg">
+<meta name="image:Corner picture" content="http://static.tumblr.com/o4povtk/qfnnri0dq/comp_2__0_00_01_04_2.png">
+<meta name="image:Background" content="http://static.tumblr.com/o4povtk/3Z2nrgkdb/white_swirly_waves__0_00_00_00_.png">
+
+<meta name="color:Background" content="#FFFFFF">
+<meta name="color:Text" content="#000000">
+<meta name="color:Bold text" content="#000000">
+<meta name="color:Italic text" content="#000000">
+<meta name="color:Link" content="#5E5E5E">
+<meta name="color:Link hover" content="#000000">
+<meta name="color:Blockquote" content="#6EC493">
+<meta name="color:Scrollbar" content="#6EC493">
+<meta name="color:Scrollbar border" content="#7bdad">
+<meta name="color:Scrollbar background" content="#FFFFFF">
+
+<meta name="color:Post background" content="#FFFFFF">
+<meta name="color:Post title" content="#000000">
+<meta name="color:Post title link" content="#000000">
+<meta name="color:Post title link hover" content="#000000">
+<meta name="color:Answer background" content="#E8B8CC">
+<meta name="color:Answer text" content="#000000">
+<meta name="color:Question text" content="#000000">
+<meta name="color:Asker name" content="#000000">
+<meta name="color:Post info text" content="#FFFFFF">
+<meta name="color:Post info link" content="#FFC0CB">
+<meta name="color:Post info background" content="#86608E">
+
+<meta name="color:Pagination background" content="#6EC493">
+<meta name="color:Pagination arrow" content="#FFFFFF">
+<meta name="color:Pagination hover background" content="#E8B8CC">
+<meta name="color:Pagination hover arrow" content="#000000">
+<meta name="color:Pagination unavailable background" content="#A5A7A5">
+<meta name="color:Pagination unavailable arrow" content="#FFFFFF">
+<meta name="color:Sidebar arrow" content="#FFFFFF">
+<meta name="color:Sidebar container background" content="#6EC493">
+<meta name="color:Sidebar container hover background" content="#E9E9E9">
+<meta name="color:Sidebar background" content="#FBFEF7">
+<meta name="color:Sidebar picture background" content="#97DEB8">
+<meta name="color:Sidebar links" content="#333333">
+<meta name="color:Sidebar links hover" content="#97DEB8">
+<meta name="color:Sidebar links hover background" content="#FEFFFF">
+<meta name="color:Description box text" content="#000000">
+<meta name="color:Description box background" content="#FFFFFF">
+<meta name="color:Description box border" content="#000000">
+<meta name="color:Description box scrollbar" content="#494142">
+<meta name="color:Description box scrollbar border" content="#494142">
+<meta name="color:Description box scrollbar background" content="#FFFFFF">
+
+<meta name="font:Body text" content="Avalon">
+<meta name="font:Sidebar title text" content='Brutal Type'>
+<meta name="font:Post title text" content="Avalon">
+<meta name="font:Quote source text" content="Arquitecta">
+<meta name="font:Post info text" content="Avalon">
+
+<meta name="text:Link 1 Title" content="link 1">
+<meta name="text:Link 1 URL" content="">
+<meta name="text:Link 2 Title" content="link 2">
+<meta name="text:Link 2 URL" content="">
+<meta name="text:Link 3 Title" content="link 3">
+<meta name="text:Link 3 URL" content="">
+<meta name="text:Link 4 Title" content="link 4">
+<meta name="text:Link 4 URL" content="">
+
+{block:IfInfiniteScrolling}
+<script type="text/javascript" src="http://codysherman.tumblr.com/tools/infinite-scrolling/code"></script>
+{/block:IfInfiniteScrolling}
+
+<style type="text/css">
+::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+    background-color: {color:Scrollbar background};
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: {color:Scrollbar};
+    -webkit-border-radius: 1ex;
+    border: 1px double {color:Scrollbar border};
+}
+
+iframe#tumblr_controls {
+    right:3px !important;
+    position:fixed !important;
+    opacity: 0.3;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+ 
+iframe#tumblr_controls:hover {
+    opacity: 1.0;
+}
+
+::selection {
+    background-color: transparent;
+}
+ 
+::-moz-selection {
+    background-color: transparent;
+}
+ 
+::-webkit-selection {
+    background-color: transparent;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, blockquote {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+p {
+    margin:10;
+    padding:0;
+    list-style:none;
+}
+
+body {
+    font:{font:Body text};
+    font-size:10px;
+    color: {color:Text};
+    background-color: {color:Background};
+    background-image: url('{image:Background}');
+    background-repeat: repeat;
+    background-attachment:fixed;
+    line-height:10px;
+    overflow-y:auto;
+}
+
+a {
+    color:{color:Link};
+    text-decoration:none;} 
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    color:{color:Link hover};
+}
+
+b, strong {
+    color:{color:Bold text};
+}
+
+i, em {
+    color:{color:Italic text};
+}
+
+small {
+    font-size:8px;
+}
+
+big {
+    font-size:12px;
+}
+
+ul {
+    text-align:justify;
+}
+ul, ol {
+    margin-left:-25px;
+}
+
+blockquote {
+    padding: 3px 0 3px 13px;
+    border-left: 7px solid {color:Blockquote};
+    text-align:justify;
+}
+blockquote p {
+    display:block!important;
+}
+blockquote img {
+    max-width:220px!important;
+}
+
+#posts {
+    {block:IfNotMirrorLayout}
+    float:right;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    float:left;
+    {/block:IfMirrorLayout}
+}
+
+/* POSTS */
+.post {
+    line-height: 18px;
+    clear: both;
+    background-color:{color:Post background};
+    color:{color:Text};
+    width: 500px;
+    height: 100%;
+    padding: 20px 20px 20px 20px;
+    -webkit-box-shadow: 1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    -moz-box-shadow:    1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    box-shadow:         1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+}
+.post h3 {
+    font-size: 2em;
+    overflow:visible;
+    font-family:{font:Post title text};
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.post h3:hover {
+    margin-left:10px;
+}
+
+.caption blockquote {
+    padding-left: 20px;
+}
+
+.post text {
+    text-align: left;
+}
+
+.post photo {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.post photo img {
+    border: 0;
+}
+
+.post quote {
+    text-align: left;
+}
+.post quote .source {
+    font-size: 10em;
+    font-family: {font:Quote source text};
+}
+
+.post ask {
+    text-align: left;
+}
+
+.answer {
+    text-align: left;
+    line-height: 15px;
+    color:{color:Answer text};
+    background-color:{color:Answer background};
+    padding: 10px 10px 10px 10px;
+}
+.question {
+    margin-bottom: 0px;
+    line-height: 15px;
+    color:{color:Question text};
+}
+
+.ask {
+    width: 500px;
+    background-color:{color:Post background};
+    padding: 20px 20px 20px 20px;
+    -webkit-box-shadow: 1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    -moz-box-shadow:    1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    box-shadow:         1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+}
+
+.askerportrait {
+    margin: 10px;
+    position: absolute;
+}
+
+.a {
+    margin-left: 80px;
+    min-height: 64px;
+    padding: 10px;
+}
+
+.asker {
+    color: {color:Asker name};
+    text-transform: uppercase;
+}
+
+.post link {
+    text-align: left;
+}
+
+.post audio {
+    text-align: left;
+}
+
+.post video {
+    text-align: left;
+    width: 500px;
+}
+
+.post chat {
+    text-align: left;
+}
+.post chat li {
+    list-style-type: none;
+}
+
+.info {
+    font-size: 9px;
+    text-transform:none;
+    margin-bottom: 60px;
+    line-height:150%;
+    font-family: {font:Post info text};
+    background-color: {color:Post info background};
+    width: 500px;
+    padding: 5px 20px 5px 20px;
+    -webkit-box-shadow: 1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    -moz-box-shadow:    1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    box-shadow:         1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    
+}
+
+ol.notes {
+    display:block;
+    text-align:left;
+    margin-bottom:30px;
+}
+ol.notes li.note{
+    padding:1%;
+    list-style-type:none;
+}
+
+.pagenotes {
+    text-align:left;
+    background-color:{color:Post background};
+    -webkit-box-shadow: 1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    -moz-box-shadow:    1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    box-shadow:         1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    padding: 20px 20px 20px 20px;
+    width:500px;
+}
+
+.tags {
+    display: none;
+}
+.tags:hover {
+    display: block;
+}
+.tags a {
+    margin 2px 2px 2px 2px;
+}
+.tags a:hover {
+    text-decoration:underline;
+}
+
+.caption{
+    padding-top:13px;
+    padding-left:10px;
+    padding-bottom:5px;
+    margin-top:5px;
+    text-align:left;
+    font-size:10px;
+    font-style:italic;
+    padding-right:10px;
+    overflow:scroll;
+}	
+
+.permapage {
+    font-family:{font:Body text};
+    letter-spacing: 1px;
+    font-size: 10px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 10px 0 10px;
+    color: {color:Text};
+    background-color: {color:Post background};
+    width: 500px;
+}
+
+.postsource {
+    font-family:{font:Permapage text};
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    text-decoration: none;
+    color: {color:Text};
+    margin-bottom: 10px;
+    background-color: {color:Post background};
+    width: 500px;
+}
+.postsource a {
+    text-decoration: none;
+    color: {color:Link};
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.postsource a:hover {
+    color: {color:Link hover};
+}
+
+.posttitle {
+    text-align: left;
+    font-family: {font:Post title text};
+    padding: 3px 0 3px 20px;
+    color: {color:Post title};
+}
+.posttitle a {
+    color: {color:Post title link};
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.posttitle a:hover {
+    color: {color:Post title link hover};
+    padding: 3px 0 3px 5px;
+}
+
+{block:IfBlackAndWhiteImages}
+.post img, .html_photoset {
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+{block:IfColorImagesOnHover}
+.post img:hover, .html_photoset:hover {
+    -webkit-filter: grayscale(0%);
+}
+{/block:IfColorImagesOnHover}
+{/block:IfBlackAndWhiteImages}
+
+/* LAYOUT */
+#post_container {
+    {block:IfNotMirrorLayout}
+    float:right;
+    right:500px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    float:left;
+    left:500px;
+    {/block:IfMirrorLayout}
+    position:relative;
+    padding: 20px 0px 20px 0px;
+    width:500px;
+    height:100%;
+    z-index:9999999;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+#post_container > ol {
+    list-style-type:none;
+}
+
+#right_picture {
+    {block:IfNotMirrorLayout}
+    float:right;
+    right:0px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    float:left;
+    left:0px;
+    {/block:IfMirrorLayout}
+    position: fixed;
+    z-index: 9990;
+    height: 100%;
+    width:450px;
+    bottom: 0px;
+    background: url({image:Sidebar picture}) no-repeat bottom right;
+    background-color:{color:Sidebar picture background};
+    background-size:cover;
+}
+
+#nextpage, #previouspage, #nextpage_unavailable, #previouspage_unavailable {
+    height:35px;
+    width:35px;
+    bottom:10px;
+    border-radius:40px;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+#nextpage, #previouspage {
+    z-index:2;
+    background-color:{color:Pagination background};
+    color:{color:Pagination arrow};
+    opacity:0.4;
+}
+
+#nextpage:hover, #previouspage:hover {
+    background-color:{color:Pagination hover background};
+    color:{color:Pagination hover arrow};
+    -ms-transform: scale(0.8, 0.8);
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+}
+
+#nextpage_unavailable, #previouspage_unavailable {
+    z-index:1;
+    opacity:0.3;
+    background-color:{color:Pagination unavailable background};
+    color:{color:Pagination unavailable arrow};
+}
+
+#nextpage, #nextpage_unavailable {
+    {block:IfNotMirrorLayout}
+    right:350px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    left:390px;
+    {/block:IfMirrorLayout}
+}
+
+#previouspage, #previouspage_unavailable {
+    {block:IfNotMirrorLayout}
+    right:390px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    left:350px;
+    {/block:IfMirrorLayout}
+}
+
+#right_picture:hover #nextpage, #right_picture:hover #previouspage {
+    opacity:1.0;
+}
+
+#sidebar_container {
+    {block:IfNotMirrorLayout}
+    float:right;
+    right:450px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    float:left;
+    left:450px;
+    {/block:IfMirrorLayout}
+    position:fixed;
+    z-index:999;
+    background-color:{color:Sidebar container background};
+    width:40px;
+    height:100%;
+    bottom: 0px;
+    margin-bottom: 0px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+}
+
+#arrow_text {
+    margin: 5px, auto, 5px, auto;
+    height:100%;
+    width:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:{color:Sidebar arrow};
+    opacity:0.7;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+#sidebar_container:hover #arrow_text {
+    opacity:0.0;
+}
+
+#sidebar_container:hover {
+    width:230px;
+    background:{color:Sidebar container hover background};
+}
+
+#sidebar_container:hover + #post_container {
+    {block:IfNotMirrorLayout}
+    right:700px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    left:700px;
+    {/block:IfMirrorLayout}
+}
+
+#sidebar {
+    {block:IfNotMirrorLayout}
+    margin-left:200px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    margin-left:-200px;
+    {/block:IfMirrorLayout}
+    overflow: hidden;
+    top: 0px;
+    line-height:15px;
+    width: auto;
+    height:100%;
+    position: fixed;
+    text-align: center;
+    float: left;
+    color:{color:Description box text};
+    background-color:{color:Sidebar background};
+    border-radius: 25px;
+    padding: 25px 30px 50px 20px;
+    opacity:0.0;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+}
+
+#sidebar img {
+    width:200px;
+}	
+
+#description {
+    width:180px;
+    padding-left:10px;
+    padding-right:10px;
+    text-align:justify;
+}
+
+#descbox {
+    overflow:scroll;
+    width:auto;
+    height:400px;
+    padding:5px 5px 5px 5px;
+    border: 1px solid {color:Description box border};
+    background-color:{color:Description box background};
+    color:{color:Description box text};
+    text-align: center;
+}
+#descbox::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: {color:Description box scrollbar background};
+}
+#desc::-webkit-scrollbar-thumb {
+    background-color:{color:Description box scrollbar};
+    -webkit-border-radius: 1ex;
+    border: 1px double {color:Description box scrollbar border};
+}
+
+#links {
+    padding:7px;
+}
+
+#links a {
+    padding:5px;
+    margin-right:0px;
+    color:{color:Sidebar links};
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+#links a:hover {
+    color:{color:Sidebar links hover};
+    background-color:{color:Sidebar links hover background};
+    border-bottom: 1px dashed;
+}
+
+#title {
+    font-size:12px;
+    margin-bottom:3px;
+    font-weight:bold;
+    font-family:{font:Sidebar title text};
+    text-transform: uppercase;
+    border-bottom: 1px dashed;
+}
+
+#sidebar_container:hover #sidebar {
+    {block:IfNotMirrorLayout}
+    margin-left:8px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    margin-left:-20px;
+    {/block:IfMirrorLayout}
+    opacity:0.7;
+}
+
+#left_picture {
+    {block:IfNotMirrorLayout}
+    float:left;
+    left:10px;
+    {/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}
+    float:right;
+    right:10px;
+    {/block:IfMirrorLayout}
+    position:fixed;
+    height:110%;
+    width:550px;
+    bottom:0px;
+    background: url('{image:Corner picture}') no-repeat bottom {block:IfNotMirrorLayout}left{/block:IfNotMirrorLayout}{block:IfMirrorLayout}right{/block:IfMirrorLayout};
+    background-size:contain;
+    {block:IfMirrorCornerImage}
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    {/block:IfMirrorCornerImage}
+}
+
+{CustomCSS}
+
+</style>
+
+</head>
+<body>
+
+    <div id="left_picture"></div>
+
+    <div id="right_picture">
+
+        {block:IfShowPaginationButtons}
+        <div id="nextpage_unavailable"><h3> > </h3></div>
+        {block:Pagination}
+        {block:PreviousPage}
+        <a href="{PreviousPage}"><div id="previouspage"><h3> < </h3></div></a>
+        {/block:PreviousPage}
+        {block:NextPage}
+        <a href="{NextPage}"><div id="nextpage"><h3> > </h3></div></a>
+        {/block:NextPage}
+        <div id="previouspage_unavailable"><h3> < </h3></div>
+        {/block:Pagination}
+        {/block:IfShowPaginationButtons}
+    </div>
+    <div id="sidebar_container">
+        <div id="sidebar">
+            <br>
+            <div id="title">
+                <a href="/">{title}</a>
+            </div>
+            <div id="links">
+                <a href="/">home</a>
+                <a href="/ask">message</a>
+                <a href="/archive">archive</a>
+                <a href="http://raiidens.tumblr.com/">theme</a>
+            </div>
+            <div id="description">
+            <div id="descbox">
+                <br>{Description}<br>
+            </div>
+            </div>
+            <div id="links">
+                {block:IfLink1Title}<a href="{text:Link 1 URL}">{text:Link 1 Title}</a>{/block:IfLink1Title}
+                {block:IfLink2Title}<a href="{text:Link 2 URL}">{text:Link 2 Title}</a>{/block:IfLink2Title}
+                {block:IfLink3Title}<a href="{text:Link 3 URL}">{text:Link 3 Title}</a>{/block:IfLink3Title}
+                {block:IfLink4Title}<a href="{text:Link 4 URL}">{text:Link 4 Title}</a>{/block:IfLink4Title}
+            </div>
+
+        </div>
+        <div id="arrow_text">
+            <h1>{block:IfNotMirrorLayout}<<{/block:IfNotMirrorLayout}
+                {block:IfMirrorLayout}>>{/block:IfMirrorLayout}
+            </h1>
+        </div>
+    </div>
+    <div id="post_container">
+        <ol id="posts">
+            <div class = "autopagerize_page_element" >
+            {block:Posts}
+            {block:Text}
+            <li class="post text">
+            {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+            {/block:Title}{Body}
+            </li>
+            {/block:Text}
+
+            {block:Photo}
+            <li class="post photo">
+            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+            
+            {block:IfShowCaptions}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:IfShowCaptions}
+            {block:IfNotShowCaptions}
+            {block:PermalinkPage}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:PermalinkPage}
+            {/block:IfNotShowCaptions}
+            </li>
+            {/block:Photo}
+
+            {block:Photoset}
+            <li class="post photoset">
+            {Photoset-500}
+            {block:IfShowCaptions}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:IfShowCaptions}
+            {block:IfNotShowCaptions}
+            {block:PermalinkPage}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:PermalinkPage}
+            {/block:IfNotShowCaptions}
+            </li>
+            {/block:Photoset}
+
+            {block:Quote}
+            <li class="post quote">
+            {Quote}
+            {block:Source}
+            <h3><div class="source">— {Source}</div></h3>
+            {/block:Source}
+            </li>
+            {/block:Quote}
+
+            {block:Link}
+            <li class="post link">
+            <h3><a href="{URL}" {Target}>{Name}</a></h3>
+            <br>
+            {block:Description}
+            <div class="description">{Description}</div>
+            {/block:Description}
+            </li>
+            {/block:Link}
+            
+            {block:Chat}
+            <li class="post chat">
+            {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+            {/block:Title}
+            <br>
+            {block:Lines}
+            {block:Label}<b>{Label}</b>{/block:Label}
+            {Line}<br />
+            {/block:Lines}
+            </li>
+            {/block:Chat}
+
+            {block:Answer}
+            <div class="ask">
+            <img class="askerportrait" src="{AskerPortraitURL-64}">
+            <div style="color:{color:Asker text};">
+            <div class="a">
+            <b>{Asker} asks</b>: <div class="question">{Question}</div>
+            </div>
+            </div><br>
+            <div class="answer">{Answer}</div>
+            </div>
+            {/block:Answer}
+
+            {block:Video}
+            <li class="post video">
+            {Video-500}
+            {block:IfShowCaptions}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:IfShowCaptions}
+            {block:IfNotShowCaptions}
+            {block:PermalinkPage}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:PermalinkPage}
+            {/block:IfNotShowCaptions}
+            </li>
+            {/block:Video}
+
+            {block:Audio}
+            <li class="post audio">
+            {block:AlbumArt}
+            <img src="{AlbumArtURL}">
+            {/block:AlbumArt}
+            {AudioPlayer}
+            {block:trackname}<div class="aline"><b>track name:</b> {trackname}</div>{/block:trackname}
+            {block:artist}<div class="aline"><b>artist:</b> {artist}</div>{/block:artist}
+            {block:album}<div class="aline"><b>album:</b> {album}</div>{/block:album}
+            {block:playcount}<div class="aline"><b>play count:</b> {playcount}</div>{/block:playcount}
+            {block:IfShowCaptions}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:IfShowCaptions}
+            {block:IfNotShowCaptions}
+            {block:PermalinkPage}
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+            {/block:PermalinkPage}
+            {/block:IfNotShowCaptions}
+            </li>
+            {/block:Audio}
+
+            <div class="info">
+                <a href="{ReblogURL}" target="_blank" style="color:{color:Post info link}">REBLOG</a> <font color="{color:Post info text}">  |  {block:Date}{TimeAgo}</a>{/block:Date} with <a href="{Permalink}" style="color:{color:Post info link}"> {NoteCountWithLabel}</a>
+            
+            {block:permalinkpage} / {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParenttitle}" style="color:{color:Post info link}">Via</a> / {block:ContentSource}<a href="{ReblogRootURL}" "{ReblogRootName}" title="{ReblogRoottitle}" style="color:{color:Post info link}">Source</a>{/block:ContentSource}{/block:RebloggedFrom}
+                {block:IfNotShowTagsOnIndexPage}{block:HasTags}<br>Tags: {block:Tags}<a href="{TagURL}" style="color:{color:Post info link}">#{Tag}</a>  {/block:Tags}{/block:HasTags}{/block:IfNotShowTagsOnIndexPage}
+                {/block:permalinkpage}
+                {block:IfShowTagsOnIndexPage}
+            {block:HasTags}<br>Tags: {block:Tags}<a href="{TagURL}" style="color:{color:Post info link}">#{Tag}</a>  {/block:Tags}{/block:HasTags}
+            {/block:IfShowTagsOnIndexPage}
+            </font>
+            </div>
+
+            {block:PostNotes}<div class="pagenotes">{PostNotes}</div>{/block:PostNotes}
+            {/block:Posts}
+            </div>
+            </ol>
+    </div>
+
+</body></html>
