@@ -10,8 +10,8 @@
  |
  |  Theme #1 by raiidens (@ tumblr)
  |  Published July 2015
- |  Updated October 2015
- |  Ver. 1.06
+ |  Updated February 2016
+ |  Ver. 1.08
  |
  |  Edit as much as you like, but please do not
  |  claim as your own work, and leave credit somewhere.
@@ -41,6 +41,8 @@
 <meta name="color:Scrollbar" content="#6EC493">
 <meta name="color:Scrollbar border" content="#7bdad">
 <meta name="color:Scrollbar background" content="#FFFFFF">
+<meta name="color:Text highlight" content="white">
+<meta name="color:Text highlight background" content="#86608E">
 
 <meta name="color:Post background" content="#FFFFFF">
 <meta name="color:Post title" content="#000000">
@@ -75,11 +77,11 @@
 <meta name="color:Description box scrollbar border" content="#494142">
 <meta name="color:Description box scrollbar background" content="#FFFFFF">
 
-<meta name="font:Body text" content="Avalon">
+<meta name="font:Body text" content="Helvetica">
 <meta name="font:Sidebar title text" content='Brutal Type'>
-<meta name="font:Post title text" content="Avalon">
+<meta name="font:Post title text" content="Helvetica">
 <meta name="font:Quote source text" content="Arquitecta">
-<meta name="font:Post info text" content="Avalon">
+<meta name="font:Post info text" content="Helvetica">
 
 <meta name="text:Link 1 Title" content="link 1">
 <meta name="text:Link 1 URL" content="">
@@ -91,7 +93,7 @@
 <meta name="text:Link 4 URL" content="">
 
 {block:IfInfiniteScrolling}
-<script type="text/javascript" src="http://codysherman.tumblr.com/tools/infinite-scrolling/code"></script>
+<script type="text/javascript" src="http://static.tumblr.com/o4povtk/zYLo1itkm/codyshermaninfscroll.js"></script>
 {/block:IfInfiniteScrolling}
 
 <style type="text/css">
@@ -107,9 +109,11 @@
     border: 1px double {color:Scrollbar border};
 }
 
-iframe#tumblr_controls {
+.tmblr-iframe {
+    top:0px !important;
     right:3px !important;
     position:fixed !important;
+    z-index:999999 !important;
     opacity: 0.3;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -117,21 +121,13 @@ iframe#tumblr_controls {
     transition: all 0.4s ease-in-out;
 }
  
-iframe#tumblr_controls:hover {
-    opacity: 1.0;
-}
+.tmblr-iframe:hover {opacity: 1.0;}
 
-::selection {
-    background-color: transparent;
-}
+::selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
  
-::-moz-selection {
-    background-color: transparent;
-}
+::-moz-selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
  
-::-webkit-selection {
-    background-color: transparent;
-}
+::-webkit-selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
 
 html, body, h1, h2, h3, h4, h5, h6, blockquote {
     margin:0;
@@ -147,7 +143,7 @@ p {
 
 body {
     font:{font:Body text};
-    font-size:10px;
+    font-size:11px;
     color: {color:Text};
     background-color: {color:Background};
     background-image: url('{image:Background}');
@@ -491,7 +487,6 @@ ol.notes li.note{
     left:0px;
     {/block:IfMirrorLayout}
     position: fixed;
-    z-index: 9990;
     height: 100%;
     width:450px;
     bottom: 0px;
@@ -569,12 +564,12 @@ ol.notes li.note{
     left:450px;
     {/block:IfMirrorLayout}
     position:fixed;
-    z-index:999;
     background-color:{color:Sidebar container background};
     width:40px;
     height:100%;
     bottom: 0px;
     margin-bottom: 0px;
+    z-index:-1;
     -webkit-transition: all 0.7s ease-in-out;
     -moz-transition: all 0.7s ease-in-out;
     -o-transition: all 0.7s ease-in-out;
@@ -767,7 +762,7 @@ ol.notes li.note{
                 <a href="/">home</a>
                 <a href="/ask">message</a>
                 <a href="/archive">archive</a>
-                <a href="http://raiidens.tumblr.com/">theme</a>
+                <a href="http://raiidens.tumblr.com/tagged/themesbyraiidens">theme</a>
             </div>
             <div id="description">
             <div id="descbox">
@@ -788,6 +783,7 @@ ol.notes li.note{
             </h1>
         </div>
     </div>
+    
     <div id="post_container">
         <ol id="posts">
             <div class = "autopagerize_page_element" >
@@ -901,14 +897,14 @@ ol.notes li.note{
 
             {block:Audio}
             <li class="post audio">
-            {block:AlbumArt}
-            <img src="{AlbumArtURL}">
-            {/block:AlbumArt}
-            {AudioPlayer}
-            {block:trackname}<div class="aline"><b>track name:</b> {trackname}</div>{/block:trackname}
+            {block:AlbumArt}<div style="float:left;"><img src="{AlbumArtURL}" width="150" height="150"></div>{/block:AlbumArt}
+            <div style="position:relative; left:10px; top:5px;">
+			{block:trackname}<div class="aline"><b>track name:</b> {trackname}</div>{/block:trackname}
             {block:artist}<div class="aline"><b>artist:</b> {artist}</div>{/block:artist}
             {block:album}<div class="aline"><b>album:</b> {album}</div>{/block:album}
             {block:playcount}<div class="aline"><b>play count:</b> {playcount}</div>{/block:playcount}
+			</div><div style="clear:both;"></div>
+			{block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
             {block:IfShowCaptions}
             {block:Caption}
             <div class="caption">{Caption}</div>
@@ -942,4 +938,18 @@ ol.notes li.note{
             </ol>
     </div>
 
-</body></html>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('p').each(function() {
+        var text = $(this).html();
+        var regex = /\(Source:.*\)+/ig;
+        text = text.replace(regex, '');
+        regex = /\(via(.*)\)+/ig;
+        text = text.replace(regex, '');
+        $(this).html(text);
+    });
+});
+</script>
+</html>
