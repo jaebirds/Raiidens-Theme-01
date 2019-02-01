@@ -1,24 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<title>{Title}</title>
-<link rel="shortcut icon" href="{Favicon}">
-<link rel="alternate" type="application/rss+xml" href="{RSS}">
-{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<!DOCTYPE html>
 
 <!--
  |
  |  Theme #1 by raiidens (@ tumblr)
  |  Published July 2015
- |  Updated February 2016
- |  Ver. 1.08
+ |  Updated January 2019
+ |  Ver. 1.09
  |
  |  Edit as much as you like, but please do not
  |  claim as your own work, and leave credit somewhere.
  |
  -->
 
-<meta name="if:Infinite scrolling" content="1">
+ <head>
+<title>{Title}</title>
+    
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+    
+<!-- Please don't edit these meta tags! -->
+
 <meta name="if:Show pagination buttons" content="1">
 <meta name="if:Show captions" content="1">
 <meta name="if:Show tags on index page" content="0">
@@ -27,55 +29,55 @@
 <meta name="if:Black and white images" content="0">
 <meta name="if:Color images on hover" content="0">
 
-<meta name="image:Sidebar picture" content="http://static.tumblr.com/o4povtk/nVznrd0c7/toupload.jpg">
-<meta name="image:Corner picture" content="http://static.tumblr.com/o4povtk/qfnnri0dq/comp_2__0_00_01_04_2.png">
-<meta name="image:Background" content="http://static.tumblr.com/o4povtk/3Z2nrgkdb/white_swirly_waves__0_00_00_00_.png">
+<meta name="image:Sidebar picture" content="https://static.tumblr.com/o4povtk/nVznrd0c7/toupload.jpg">
+<meta name="image:Corner picture" content="https://static.tumblr.com/o4povtk/qfnnri0dq/comp_2__0_00_01_04_2.png">
+<meta name="image:Background" content="https://static.tumblr.com/o4povtk/3Z2nrgkdb/white_swirly_waves__0_00_00_00_.png">
 
-<meta name="color:Background" content="#FFFFFF">
-<meta name="color:Text" content="#000000">
-<meta name="color:Bold text" content="#000000">
-<meta name="color:Italic text" content="#000000">
+<meta name="color:Background" content="#fff">
+<meta name="color:Text" content="#000">
+<meta name="color:Bold text" content="#000">
+<meta name="color:Italic text" content="#000">
 <meta name="color:Link" content="#5E5E5E">
-<meta name="color:Link hover" content="#000000">
+<meta name="color:Link hover" content="#000">
 <meta name="color:Blockquote" content="#6EC493">
 <meta name="color:Scrollbar" content="#6EC493">
 <meta name="color:Scrollbar border" content="#7bdad">
-<meta name="color:Scrollbar background" content="#FFFFFF">
-<meta name="color:Text highlight" content="white">
+<meta name="color:Scrollbar background" content="#fff">
+<meta name="color:Text highlight" content="#fff">
 <meta name="color:Text highlight background" content="#86608E">
 
-<meta name="color:Post background" content="#FFFFFF">
-<meta name="color:Post title" content="#000000">
-<meta name="color:Post title link" content="#000000">
-<meta name="color:Post title link hover" content="#000000">
+<meta name="color:Post background" content="#fff">
+<meta name="color:Post title" content="#000">
+<meta name="color:Post title link" content="#000">
+<meta name="color:Post title link hover" content="#000">
 <meta name="color:Answer background" content="#E8B8CC">
-<meta name="color:Answer text" content="#000000">
-<meta name="color:Question text" content="#000000">
-<meta name="color:Asker name" content="#000000">
-<meta name="color:Post info text" content="#FFFFFF">
+<meta name="color:Answer text" content="#000">
+<meta name="color:Question text" content="#000">
+<meta name="color:Asker name" content="#000">
+<meta name="color:Post info text" content="#fff">
 <meta name="color:Post info link" content="#FFC0CB">
 <meta name="color:Post info background" content="#86608E">
 
 <meta name="color:Pagination background" content="#6EC493">
-<meta name="color:Pagination arrow" content="#FFFFFF">
+<meta name="color:Pagination arrow" content="#fff">
 <meta name="color:Pagination hover background" content="#E8B8CC">
-<meta name="color:Pagination hover arrow" content="#000000">
+<meta name="color:Pagination hover arrow" content="#000">
 <meta name="color:Pagination unavailable background" content="#A5A7A5">
-<meta name="color:Pagination unavailable arrow" content="#FFFFFF">
-<meta name="color:Sidebar arrow" content="#FFFFFF">
+<meta name="color:Pagination unavailable arrow" content="#fff">
+<meta name="color:Sidebar arrow" content="#fff">
 <meta name="color:Sidebar container background" content="#6EC493">
 <meta name="color:Sidebar container hover background" content="#E9E9E9">
 <meta name="color:Sidebar background" content="#FBFEF7">
 <meta name="color:Sidebar picture background" content="#97DEB8">
-<meta name="color:Sidebar links" content="#333333">
+<meta name="color:Sidebar links" content="#333">
 <meta name="color:Sidebar links hover" content="#97DEB8">
 <meta name="color:Sidebar links hover background" content="#FEFFFF">
-<meta name="color:Description box text" content="#000000">
-<meta name="color:Description box background" content="#FFFFFF">
+<meta name="color:Description box text" content="#000">
+<meta name="color:Description box background" content="#fff">
 <meta name="color:Description box border" content="#000000">
 <meta name="color:Description box scrollbar" content="#494142">
 <meta name="color:Description box scrollbar border" content="#494142">
-<meta name="color:Description box scrollbar background" content="#FFFFFF">
+<meta name="color:Description box scrollbar background" content="#fff">
 
 <meta name="font:Body text" content="Helvetica">
 <meta name="font:Sidebar title text" content='Brutal Type'>
@@ -92,10 +94,6 @@
 <meta name="text:Link 4 Title" content="link 4">
 <meta name="text:Link 4 URL" content="">
 
-{block:IfInfiniteScrolling}
-<script type="text/javascript" src="http://static.tumblr.com/o4povtk/zYLo1itkm/codyshermaninfscroll.js"></script>
-{/block:IfInfiniteScrolling}
-
 <style type="text/css">
 ::-webkit-scrollbar {
     width: 6px;
@@ -110,10 +108,10 @@
 }
 
 .tmblr-iframe {
-    top:0px !important;
-    right:3px !important;
-    position:fixed !important;
-    z-index:999999 !important;
+    top: 0 !important;
+    right: 3px !important;
+    position: fixed !important;
+    z-index: 999999 !important;
     opacity: 0.3;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -121,171 +119,144 @@
     transition: all 0.4s ease-in-out;
 }
  
-.tmblr-iframe:hover {opacity: 1.0;}
+.tmblr-iframe:hover {opacity: 1;}
 
-::selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
+::selection {
+    background-color: {color:Text highlight background}; color:{color:Text highlight};
+}
  
-::-moz-selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
+::-moz-selection {
+    background-color: {color:Text highlight background}; color: {color:Text highlight};
+}
  
-::-webkit-selection {background-color:{color:Text highlight background}; color:{color:Text highlight};}
+::-webkit-selection {
+    background-color: {color:Text highlight background}; color: {color:Text highlight};
+}
 
 html, body, h1, h2, h3, h4, h5, h6, blockquote {
-    margin:0;
-    padding:0;
-    list-style:none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 p {
-    margin:10;
-    padding:0;
-    list-style:none;
+    margin: 10;
+    padding: 0;
+    list-style: none;
 }
 
 body {
-    font:{font:Body text};
-    font-size:11px;
+    font: {font:Body text};
+    font-size: 11px;
     color: {color:Text};
     background-color: {color:Background};
     background-image: url('{image:Background}');
     background-repeat: repeat;
-    background-attachment:fixed;
-    line-height:10px;
-    overflow-y:auto;
+    background-attachment: fixed;
+    line-height: 10px;
+    overflow-y: auto;
 }
 
 a {
-    color:{color:Link};
-    text-decoration:none;} 
+    color: {color:Link};
+    text-decoration: none;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
 
-a:hover {
-    color:{color:Link hover};
-}
+a:hover {color: {color:Link hover};}
 
-b, strong {
-    color:{color:Bold text};
-}
+b, strong {color:{color:Bold text};}
 
-i, em {
-    color:{color:Italic text};
-}
+i, em {color:{color:Italic text};}
 
-small {
-    font-size:8px;
-}
+small {font-size: 8px;}
 
-big {
-    font-size:12px;
-}
+big {font-size: 12px;}
 
-ul {
-    text-align:justify;
-}
-ul, ol {
-    margin-left:-25px;
-}
+ul {text-align: justify;}
+ul, ol {margin-left: -25px;}
 
 blockquote {
     padding: 3px 0 3px 13px;
     border-left: 7px solid {color:Blockquote};
-    text-align:justify;
+    text-align: justify;
 }
-blockquote p {
-    display:block!important;
-}
+blockquote p {display: block!important;}
 blockquote img {
-    display:block;
-	max-width:450px;
-	width:auto;
-	height:auto;
+    display: block;
+	max-width: 450px;
+	width: auto;
+	height: auto;
 }
 
 #posts {
-    {block:IfNotMirrorLayout}
-    float:right;
-    {/block:IfNotMirrorLayout}
-    {block:IfMirrorLayout}
-    float:left;
-    {/block:IfMirrorLayout}
+    {block:IfNotMirrorLayout}float: right;{/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}float: left;{/block:IfMirrorLayout}
 }
 
-/* POSTS */
 .post {
     line-height: 18px;
     clear: both;
-    background-color:{color:Post background};
-    color:{color:Text};
+    background-color: {color:Post background};
+    color: {color:Text};
     width: 500px;
     height: 100%;
-    padding: 20px 20px 20px 20px;
-    -webkit-box-shadow: 1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    -moz-box-shadow:    1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    box-shadow:         1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    padding: 20px;
+    -webkit-box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    -moz-box-shadow:    1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    box-shadow:         1px 0 3px 0 rgba(50, 50, 50, 0.69);
 }
 .post h3 {
     font-size: 2em;
-    overflow:visible;
-    font-family:{font:Post title text};
+    overflow: visible;
+    font-family: {font:Post title text};
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
 }
-.post h3:hover {
-    margin-left:10px;
-}
+.post h3:hover {margin-left: 10px;}
 
-.caption blockquote {
-    padding-left: 20px;
-}
+.caption blockquote {padding-left: 20px;}
 
-.post text {
-    text-align: left;
-}
+.post text {text-align: left;}
 
 .post photo {
     margin-bottom: 5px;
     text-align: center;
 }
-.post photo img {
-    border: 0;
-}
+.post photo img {border: 0;}
 
-.post quote {
-    text-align: left;
-}
+.post quote {text-align: left;}
 .post quote .source {
     font-size: 10em;
     font-family: {font:Quote source text};
 }
 
-.post ask {
-    text-align: left;
-}
+.post ask {text-align: left;}
 
 .answer {
     text-align: left;
     line-height: 15px;
-    color:{color:Answer text};
-    background-color:{color:Answer background};
-    padding: 10px 10px 10px 10px;
+    color: {color:Answer text};
+    background-color: {color:Answer background};
+    padding: 10px;
 }
 .question {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     line-height: 15px;
-    color:{color:Question text};
+    color: {color:Question text};
 }
 
 .ask {
     width: 500px;
-    background-color:{color:Post background};
-    padding: 20px 20px 20px 20px;
-    -webkit-box-shadow: 1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    -moz-box-shadow:    1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    box-shadow:         1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    background-color: {color:Post background};
+    padding: 20px;
+    -webkit-box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    -moz-box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
 }
 
 .askerportrait {
@@ -304,88 +275,72 @@ blockquote img {
     text-transform: uppercase;
 }
 
-.post link {
-    text-align: left;
-}
+.post link {text-align: left;}
 
-.post audio {
-    text-align: left;
-}
+.post audio {text-align: left;}
 
 .post video {
     text-align: left;
     width: 500px;
 }
 
-.post chat {
-    text-align: left;
-}
-.post chat li {
-    list-style-type: none;
-}
+.post chat {text-align: left;}
+.post chat li {list-style-type: none;}
 
 .info {
     font-size: 9px;
-    text-transform:none;
+    text-transform: none;
     margin-bottom: 60px;
-    line-height:150%;
+    line-height: 150%;
     font-family: {font:Post info text};
     background-color: {color:Post info background};
     width: 500px;
-    padding: 5px 20px 5px 20px;
-    -webkit-box-shadow: 1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    -moz-box-shadow:    1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    box-shadow:         1px 0px 3px 0px rgba(50, 50, 50, 0.69);
+    padding: 5px 20px;
+    -webkit-box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    -moz-box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
     
 }
 
 ol.notes {
-    display:block;
-    text-align:left;
-    margin-bottom:30px;
+    display: block;
+    text-align: left;
+    margin-bottom: 30px;
 }
 ol.notes li.note{
-    padding:1%;
-    list-style-type:none;
+    padding: 1%;
+    list-style-type: none;
 }
 
 .pagenotes {
-    text-align:left;
-    background-color:{color:Post background};
-    -webkit-box-shadow: 1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    -moz-box-shadow:    1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    box-shadow:         1px 0px 3px 0px rgba(50, 50, 50, 0.69);
-    padding: 20px 20px 20px 20px;
-    width:500px;
+    text-align: left;
+    background-color: {color:Post background};
+    -webkit-box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    -moz-box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    box-shadow: 1px 0 3px 0 rgba(50, 50, 50, 0.69);
+    padding: 20px;
+    width: 500px;
 }
 
-.tags {
-    display: none;
-}
-.tags:hover {
-    display: block;
-}
-.tags a {
-    margin 2px 2px 2px 2px;
-}
-.tags a:hover {
-    text-decoration:underline;
-}
+.tags {display: none;}
+.tags:hover {display: block;}
+.tags a {margin 2px;}
+.tags a:hover {text-decoration: underline;}
 
 .caption{
-    padding-top:13px;
-    padding-left:10px;
-    padding-bottom:5px;
-    margin-top:5px;
-    text-align:left;
-    font-size:10px;
-    font-style:italic;
-    padding-right:10px;
-    overflow:scroll;
+    padding-top: 13px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 10px;
+    font-style: italic;
+    padding-right: 10px;
+    overflow: scroll;
 }	
 
 .permapage {
-    font-family:{font:Body text};
+    font-family: {font:Body text};
     letter-spacing: 1px;
     font-size: 10px;
     margin-top: 5px;
@@ -398,7 +353,7 @@ ol.notes li.note{
 }
 
 .postsource {
-    font-family:{font:Permapage text};
+    font-family: {font:Permapage text};
     font-size: 10px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -417,9 +372,7 @@ ol.notes li.note{
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-.postsource a:hover {
-    color: {color:Link hover};
-}
+.postsource a:hover {color: {color:Link hover};}
 
 .posttitle {
     text-align: left;
@@ -448,59 +401,55 @@ ol.notes li.note{
     -o-transition: all 0.7s ease-in-out;
 }
 {block:IfColorImagesOnHover}
-.post img:hover, .html_photoset:hover {
-    -webkit-filter: grayscale(0%);
-}
+.post img:hover, .html_photoset:hover {-webkit-filter: grayscale(0%);}
 {/block:IfColorImagesOnHover}
 {/block:IfBlackAndWhiteImages}
 
 /* LAYOUT */
 #post_container {
     {block:IfNotMirrorLayout}
-    float:right;
-    right:500px;
+    float: right;
+    right: 500px;
     {/block:IfNotMirrorLayout}
     {block:IfMirrorLayout}
-    float:left;
-    left:500px;
+    float: left;
+    left: 500px;
     {/block:IfMirrorLayout}
     position:relative;
-    padding: 20px 0px 20px 0px;
-    width:500px;
-    height:100%;
-    z-index:9999999;
+    padding: 20px 0;
+    width: 500px;
+    height: 100%;
+    z-index: 9999999;
     -webkit-transition: all 0.7s ease-in-out;
     -moz-transition: all 0.7s ease-in-out;
     -o-transition: all 0.7s ease-in-out;
 }
-#post_container > ol {
-    list-style-type:none;
-}
+#post_container > ol {list-style-type: none;}
 
 #right_picture {
     {block:IfNotMirrorLayout}
-    float:right;
-    right:0px;
+    float: right;
+    right: 0;
     {/block:IfNotMirrorLayout}
     {block:IfMirrorLayout}
-    float:left;
-    left:0px;
+    float: left;
+    left: 0;
     {/block:IfMirrorLayout}
     position: fixed;
     height: 100%;
-    width:450px;
-    bottom: 0px;
+    width: 450px;
+    bottom: 0;
     background: url({image:Sidebar picture}) no-repeat bottom right;
-    background-color:{color:Sidebar picture background};
-    background-size:cover;
+    background-color: {color:Sidebar picture background};
+    background-size: cover;
 }
 
 #nextpage, #previouspage, #nextpage_unavailable, #previouspage_unavailable {
-    height:35px;
-    width:35px;
-    bottom:10px;
-    border-radius:40px;
-    position:fixed;
+    height: 35px;
+    width: 35px;
+    bottom: 10px;
+    border-radius: 40px;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -511,146 +460,124 @@ ol.notes li.note{
 }
 
 #nextpage, #previouspage {
-    z-index:2;
-    background-color:{color:Pagination background};
-    color:{color:Pagination arrow};
-    opacity:0.4;
+    z-index: 2;
+    background-color: {color:Pagination background};
+    color: {color:Pagination arrow};
+    opacity: 0.4;
 }
 
 #nextpage:hover, #previouspage:hover {
-    background-color:{color:Pagination hover background};
-    color:{color:Pagination hover arrow};
+    background-color: {color:Pagination hover background};
+    color: {color:Pagination hover arrow};
     -ms-transform: scale(0.8, 0.8);
     -webkit-transform: scale(0.8, 0.8);
     transform: scale(0.8, 0.8);
 }
 
 #nextpage_unavailable, #previouspage_unavailable {
-    z-index:1;
-    opacity:0.3;
-    background-color:{color:Pagination unavailable background};
-    color:{color:Pagination unavailable arrow};
+    z-index: 1;
+    opacity: 0.3;
+    background-color: {color:Pagination unavailable background};
+    color: {color:Pagination unavailable arrow};
 }
 
 #nextpage, #nextpage_unavailable {
-    {block:IfNotMirrorLayout}
-    right:350px;
-    {/block:IfNotMirrorLayout}
-    {block:IfMirrorLayout}
-    left:390px;
-    {/block:IfMirrorLayout}
+    {block:IfNotMirrorLayout}right: 350px;{/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}left: 390px;{/block:IfMirrorLayout}
 }
 
 #previouspage, #previouspage_unavailable {
-    {block:IfNotMirrorLayout}
-    right:390px;
-    {/block:IfNotMirrorLayout}
-    {block:IfMirrorLayout}
-    left:350px;
-    {/block:IfMirrorLayout}
+    {block:IfNotMirrorLayout}right: 390px;{/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}left: 350px;{/block:IfMirrorLayout}
 }
 
-#right_picture:hover #nextpage, #right_picture:hover #previouspage {
-    opacity:1.0;
-}
+#right_picture:hover #nextpage, #right_picture:hover #previouspage {opacity: 1;}
 
 #sidebar_container {
     {block:IfNotMirrorLayout}
-    float:right;
-    right:450px;
+    float: right;
+    right: 450px;
     {/block:IfNotMirrorLayout}
     {block:IfMirrorLayout}
-    float:left;
-    left:450px;
+    float: left;
+    left: 450px;
     {/block:IfMirrorLayout}
-    position:fixed;
-    background-color:{color:Sidebar container background};
-    width:40px;
-    height:100%;
-    bottom: 0px;
-    margin-bottom: 0px;
-    z-index:-1;
+    position: fixed;
+    background-color: {color:Sidebar container background};
+    width: 40px;
+    height: 100%;
+    bottom: 0;
+    margin-bottom: 0;
+    z-index: -1;
     -webkit-transition: all 0.7s ease-in-out;
     -moz-transition: all 0.7s ease-in-out;
     -o-transition: all 0.7s ease-in-out;
 }
 
 #arrow_text {
-    margin: 5px, auto, 5px, auto;
-    height:100%;
-    width:40px;
+    margin: 5px, auto;
+    height: 100%;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color:{color:Sidebar arrow};
-    opacity:0.7;
+    color: {color:Sidebar arrow};
+    opacity: 0.7;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
 }
 
-#sidebar_container:hover #arrow_text {
-    opacity:0.0;
-}
+#sidebar_container:hover #arrow_text {opacity: 0;}
 
 #sidebar_container:hover {
-    width:230px;
-    background:{color:Sidebar container hover background};
+    width: 230px;
+    background: {color:Sidebar container hover background};
 }
 
 #sidebar_container:hover + #post_container {
-    {block:IfNotMirrorLayout}
-    right:700px;
-    {/block:IfNotMirrorLayout}
-    {block:IfMirrorLayout}
-    left:700px;
-    {/block:IfMirrorLayout}
+    {block:IfNotMirrorLayout}right: 700px;{/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}left: 700px;{/block:IfMirrorLayout}
 }
 
 #sidebar {
-    {block:IfNotMirrorLayout}
-    margin-left:200px;
-    {/block:IfNotMirrorLayout}
-    {block:IfMirrorLayout}
-    margin-left:-200px;
-    {/block:IfMirrorLayout}
+    {block:IfNotMirrorLayout}margin-left: 200px;{/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}margin-left: -200px;{/block:IfMirrorLayout}
     overflow: hidden;
-    top: 0px;
-    line-height:15px;
+    top: 0;
+    line-height: 15px;
     width: auto;
-    height:100%;
+    height: 100%;
     position: fixed;
     text-align: center;
     float: left;
-    color:{color:Description box text};
-    background-color:{color:Sidebar background};
+    color: {color:Description box text};
+    background-color: {color:Sidebar background};
     border-radius: 25px;
     padding: 25px 30px 50px 20px;
-    opacity:0.0;
+    opacity: 0;
     -webkit-transition: all 0.6s ease-in-out;
     -moz-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
 }
 
-#sidebar img {
-    width:200px;
-}	
+#sidebar img {width: 200px;}	
 
 #description {
-    width:180px;
-    padding-left:10px;
-    padding-right:10px;
-    text-align:justify;
+    width: 180px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
 }
 
 #descbox {
-    overflow:scroll;
-    width:auto;
-    height:400px;
-    padding:5px 5px 5px 5px;
+    overflow: scroll;
+    width: auto;
+    height: 400px;
+    padding: 5px;
     border: 1px solid {color:Description box border};
-    background-color:{color:Description box background};
-    color:{color:Description box text};
+    background-color: {color:Description box background};
+    color: {color:Description box text};
     text-align: center;
 }
 #descbox::-webkit-scrollbar {
@@ -659,19 +586,17 @@ ol.notes li.note{
     background: {color:Description box scrollbar background};
 }
 #desc::-webkit-scrollbar-thumb {
-    background-color:{color:Description box scrollbar};
+    background-color: {color:Description box scrollbar};
     -webkit-border-radius: 1ex;
     border: 1px double {color:Description box scrollbar border};
 }
 
-#links {
-    padding:7px;
-}
+#links {padding: 7px;}
 
 #links a {
-    padding:5px;
-    margin-right:0px;
-    color:{color:Sidebar links};
+    padding: 5px;
+    margin-right: 0;
+    color: {color:Sidebar links};
     -webkit-transition: all 0.6s ease-in-out;
     -moz-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
@@ -679,45 +604,41 @@ ol.notes li.note{
 }
 
 #links a:hover {
-    color:{color:Sidebar links hover};
-    background-color:{color:Sidebar links hover background};
+    color: {color:Sidebar links hover};
+    background-color: {color:Sidebar links hover background};
     border-bottom: 1px dashed;
 }
 
 #title {
-    font-size:12px;
-    margin-bottom:3px;
-    font-weight:bold;
-    font-family:{font:Sidebar title text};
+    font-size: 12px;
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-family: {font:Sidebar title text};
     text-transform: uppercase;
     border-bottom: 1px dashed;
 }
 
 #sidebar_container:hover #sidebar {
-    {block:IfNotMirrorLayout}
-    margin-left:8px;
-    {/block:IfNotMirrorLayout}
-    {block:IfMirrorLayout}
-    margin-left:-20px;
-    {/block:IfMirrorLayout}
-    opacity:0.7;
+    {block:IfNotMirrorLayout}margin-left: 8px;{/block:IfNotMirrorLayout}
+    {block:IfMirrorLayout}margin-left: -20px;{/block:IfMirrorLayout}
+    opacity: 0.7;
 }
 
 #left_picture {
     {block:IfNotMirrorLayout}
-    float:left;
-    left:10px;
+    float: left;
+    left: 10px;
     {/block:IfNotMirrorLayout}
     {block:IfMirrorLayout}
-    float:right;
-    right:10px;
+    float: right;
+    right: 10px;
     {/block:IfMirrorLayout}
-    position:fixed;
-    height:110%;
-    width:550px;
-    bottom:0px;
+    position: fixed;
+    height: 110%;
+    width: 550px;
+    bottom: 0;
     background: url('{image:Corner picture}') no-repeat bottom {block:IfNotMirrorLayout}left{/block:IfNotMirrorLayout}{block:IfMirrorLayout}right{/block:IfMirrorLayout};
-    background-size:contain;
+    background-size: contain;
     {block:IfMirrorCornerImage}
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -729,7 +650,6 @@ ol.notes li.note{
 }
 
 {CustomCSS}
-
 </style>
 
 </head>
@@ -762,7 +682,7 @@ ol.notes li.note{
                 <a href="/">home</a>
                 <a href="/ask">message</a>
                 <a href="/archive">archive</a>
-                <a href="http://raiidens.tumblr.com/tagged/themesbyraiidens">theme</a>
+                <a href="https://raiidens.tumblr.com/">theme</a>
             </div>
             <div id="description">
             <div id="descbox">
@@ -770,10 +690,10 @@ ol.notes li.note{
             </div>
             </div>
             <div id="links">
-                {block:IfLink1Title}<a href="{text:Link 1 URL}">{text:Link 1 Title}</a>{/block:IfLink1Title}
-                {block:IfLink2Title}<a href="{text:Link 2 URL}">{text:Link 2 Title}</a>{/block:IfLink2Title}
-                {block:IfLink3Title}<a href="{text:Link 3 URL}">{text:Link 3 Title}</a>{/block:IfLink3Title}
-                {block:IfLink4Title}<a href="{text:Link 4 URL}">{text:Link 4 Title}</a>{/block:IfLink4Title}
+                {block:IfLink1URL}<a href="{text:Link 1 URL}">{text:Link 1 Title}</a>{/block:IfLink1URL}
+                {block:IfLink2URL}<a href="{text:Link 2 URL}">{text:Link 2 Title}</a>{/block:IfLink2URL}
+                {block:IfLink3URL}<a href="{text:Link 3 URL}">{text:Link 3 Title}</a>{/block:IfLink3URL}
+                {block:IfLink4URL}<a href="{text:Link 4 URL}">{text:Link 4 Title}</a>{/block:IfLink4URL}
             </div>
 
         </div>
@@ -897,7 +817,7 @@ ol.notes li.note{
 
             {block:Audio}
             <li class="post audio">
-            {block:AlbumArt}<div style="float:left;"><img src="{AlbumArtURL}" width="150" height="150"></div>{/block:AlbumArt}
+            {block:AlbumArt}<div style="float: left;"><img src="{AlbumArtURL}" width="150" height="150"></div>{/block:AlbumArt}
             <div style="position:relative; left:10px; top:5px;">
 			{block:trackname}<div class="aline"><b>track name:</b> {trackname}</div>{/block:trackname}
             {block:artist}<div class="aline"><b>artist:</b> {artist}</div>{/block:artist}
@@ -921,13 +841,13 @@ ol.notes li.note{
             {/block:Audio}
 
             <div class="info">
-                <a href="{ReblogURL}" target="_blank" style="color:{color:Post info link}">REBLOG</a> <font color="{color:Post info text}">  |  {block:Date}{TimeAgo}</a>{/block:Date} with <a href="{Permalink}" style="color:{color:Post info link}"> {NoteCountWithLabel}</a>
+                <a href="{ReblogURL}" target="_blank" style="color: {color:Post info link}">REBLOG</a> <font color="{color:Post info text}">  |  {block:Date}{TimeAgo}</a>{/block:Date} with <a href="{Permalink}" style="color: {color:Post info link}"> {NoteCountWithLabel}</a>
             
             {block:permalinkpage} / {block:RebloggedFrom}<a href="{ReblogParentURL}" title="{ReblogParenttitle}" style="color:{color:Post info link}">Via</a> / {block:ContentSource}<a href="{ReblogRootURL}" "{ReblogRootName}" title="{ReblogRoottitle}" style="color:{color:Post info link}">Source</a>{/block:ContentSource}{/block:RebloggedFrom}
-                {block:IfNotShowTagsOnIndexPage}{block:HasTags}<br>Tags: {block:Tags}<a href="{TagURL}" style="color:{color:Post info link}">#{Tag}</a>  {/block:Tags}{/block:HasTags}{/block:IfNotShowTagsOnIndexPage}
+                {block:IfNotShowTagsOnIndexPage}{block:HasTags}<br>Tags: {block:Tags}<a href="{TagURL}" style="color: {color:Post info link}">#{Tag}</a>  {/block:Tags}{/block:HasTags}{/block:IfNotShowTagsOnIndexPage}
                 {/block:permalinkpage}
                 {block:IfShowTagsOnIndexPage}
-            {block:HasTags}<br>Tags: {block:Tags}<a href="{TagURL}" style="color:{color:Post info link}">#{Tag}</a>  {/block:Tags}{/block:HasTags}
+            {block:HasTags}<br>Tags: {block:Tags}<a href="{TagURL}" style="color: {color:Post info link}">#{Tag}</a>  {/block:Tags}{/block:HasTags}
             {/block:IfShowTagsOnIndexPage}
             </font>
             </div>
@@ -939,7 +859,7 @@ ol.notes li.note{
     </div>
 
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
     $('p').each(function() {
